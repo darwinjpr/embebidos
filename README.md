@@ -32,9 +32,12 @@ source oe-init-build-env
 '''
 Se crea el directorio ../poky/build dentro del cual esta el directorio ../conf
 
-Ya esta listo el entorno de trabajo, seguidamente:
+Ya esta listo el entorno de trabajo, seguidamente agregamos los archivos de este repositorio:
 
 1) La carpeta 'meta-py' agregarla a la carpeta poky/
 2) Los archivos dentro de la carpeta 'conf' van en poky/conf/
 
-Todo esta listo para el bitbake
+Todo esta listo crear la imagen, ejecutando:
+'''
+bitbake core-image-base
+'''
