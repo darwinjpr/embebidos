@@ -5,16 +5,14 @@ LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/MIT;md5=0835ade698e0bcf8506ecda
 
 SRC_URI = "file://setup.py \
            file://python-sniffer.py \
-	   file://footage.avi \
            file://helloworld/__init__.py \
            file://helloworld/main.py"
 
 S = "${WORKDIR}"
 
-inherit setuptools gobject-introspection
+inherit setuptools
 
 do_install_append () {
     install -d ${D}${bindir}
     install -m 0755 python-sniffer.py ${D}${bindir}
-    install -m 0755 footage.avi ${D}${bindir}
 }
